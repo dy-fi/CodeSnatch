@@ -3,7 +3,6 @@ const Schema = mongoose.Schema;
 
 require('../data/CodeSnatch-db');
 
-
 const SnipSchema = new Schema({
     title: { type: String, required: true },
     content: { type: String, required: true },

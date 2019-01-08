@@ -2,10 +2,10 @@ function showFile() {
     var picture = document.getElementById('pictureInterface');
     var file = document.getElementById('fileInterface');
 
-    if (picture.style.display === 'block') {
+    if (picture.style.display == 'block') {
         picture.style.display = 'none';
     }
-    if (file.style.display === 'none') {
+    if (file.style.display == 'none') {
         file.style.display = 'block';
     }
 }

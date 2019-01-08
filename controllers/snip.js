@@ -1,15 +1,26 @@
 const express = require('express');
 
+const User = require('../models/user');
+
+
 // Will also hander root index
 module.exports = (app) => {
 
     // index
     app.get('/', (req, res) => {
-        res.render('index');
+        var currentUser = req.user;
+
+        res.render('index', {
+            currentUser,
+        });
     })
 
     app.get('/frame', (req, res) => {
-        res.render('frame');
+        var currentUser = req.user;
+
+        res.render('frame', {
+            currentUser,
+        });
     })
 
     // uploaded code parsed, interpreted, and then displayed on this page

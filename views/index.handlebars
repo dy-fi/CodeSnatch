@@ -1,5 +1,11 @@
 <h1>CodeSnatch</h1></hr>
 <p>Write code anywhere... and run it too</p>
 
-<a href="/sign-up"><button class="btn btn-success">Sign Up</button></a>
+{{#if currentUser}}
+    <a href="/logout"><button class="btn btn-danger">Log out</button></a>
+{{else}}
+    <a href="/login"><button class="btn btn-info">Log in</button></a>
+    <a href="/sign-up"><button class="btn btn-success">Sign Up</button></a>
+{{/if}}
+
 <a href="/frame"><button class="btn btn-primary">Snatch</button></a>
