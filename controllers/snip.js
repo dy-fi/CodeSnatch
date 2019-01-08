@@ -1,4 +1,5 @@
 const express = require('express');
+const tesseract = require('tesseract')
 
 const User = require('../models/user');
 
@@ -21,6 +22,20 @@ module.exports = (app) => {
         res.render('frame', {
             currentUser,
         });
+    })
+
+    app.post('/frame', (req, res) => {
+        var currentUser = req.user;
+        var image = req.body;
+
+        tesseract.recognize(image)
+            .progress(message => console.log(message))
+            .then(image => {
+                
+        }).catch(e => {
+            console.log(e);
+        })
+
     })
 
     // uploaded code parsed, interpreted, and then displayed on this page

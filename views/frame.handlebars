@@ -1,19 +1,18 @@
 <div class='btn-group btn-group-toggle' data-toggle='buttons' id='interfaceToggle'>
-  <label class='btn btn-secondary active'>
-    <input type='radio' name='options' id='file' autocomplete='off' onclick='showFile()' checked> File
-  </label>
-  <label class='btn btn-secondary'>
-    <input type='radio' name='options' id='picture' autocomplete='off' onclick='showPicture()'> Picture
-  </label>
+    <label class='btn btn-secondary active' onclick='showFile()'>
+        <input type='radio' name='options' id='file' autocomplete='off'  checked> File
+    </label>
+    <label class='btn btn-secondary' onclick='showPicture()'>
+        <input type='radio' name='options' id='picture' autocomplete='off'> Picture
+    </label>
 </div>
 
 <br>
 
-<div class='row'>
-    <div id='fileInterface' class='col-sm-4' style='display:block'>
-        <input type='file'>
-    </div>
-    <div id='pictureInterface' class="col-sm-4" style='display:none'>
+{{>file-form}}
+
+<div class='row' id='pictureInterface' style='display:none'>
+    <div class="col-sm-4" >
         <h2>picture interface here</h2>
     </div>
 </div>
