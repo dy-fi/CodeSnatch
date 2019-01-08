@@ -1,1 +1,19 @@
-{{> upload-navbar}}
+<div class='btn-group btn-group-toggle' data-toggle='buttons' id='interfaceToggle'>
+  <label class='btn btn-secondary active'>
+    <input type='radio' name='options' id='file' autocomplete='off' onclick='showFile()' checked> File
+  </label>
+  <label class='btn btn-secondary'>
+    <input type='radio' name='options' id='picture' autocomplete='off' onclick='showPicture()'> Picture
+  </label>
+</div>
+
+<br>
+
+<div class='row'>
+    <div id='fileInterface' class='col-sm-4' style='display:block'>
+        <input type='file'>
+    </div>
+    <div id='pictureInterface' class="col-sm-4" style='display:none'>
+        <h2>picture interface here</h2>
+    </div>
+</div>
