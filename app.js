@@ -7,6 +7,7 @@ const exphbs = require('express-handlebars');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const jwt = require('jsonwebtoken');
+const fileUpload = require('express-fileupload');
 
 const app = express();
 
@@ -21,6 +22,9 @@ require('./data/CodeSnatch-db');
 
 // static scripts and styles in public
 app.use(express.static('public'));
+
+// MIDDLEWARE file upload
+app.use(fileUpload());
 
 // MIDDLEWARE body parser
 app.use(bodyParser.urlencoded({ extended: true }));

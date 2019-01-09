@@ -14,9 +14,11 @@
     "cookie-parser": "^1.4.3",
     "dotenv": "^6.2.0",
     "express": "^4.16.4",
+    "express-fileupload": "^1.1.1-alpha.1",
     "express-handlebars": "^3.0.0",
     "jsonwebtoken": "^8.4.0",
     "mongoose": "^5.4.2",
+    "replit-client": "^0.25.0",
     "tesseract.js": "^1.0.14"
   }
 }
