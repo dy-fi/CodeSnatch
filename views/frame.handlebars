@@ -17,7 +17,15 @@
     </div>
 </div>
 
-<p id='status'>Status: </p>
-<h3>This is what we got from the image: </h3>
-<p id='text-body'></p>
+{{#if status}}
+    <h4 id='status'>Status: Done</h4>
+{{else}}
+    <h4 id='status'>Status: </h4>
+{{/if}}
+
+{{#if text}}
+    <h3>This is what we got from the image: </h3>
+    <p id='text-body' onload='formatText()'>{{text}}</p>
+{{/if}}
+
 <p id='code-body'></p>

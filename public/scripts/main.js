@@ -13,3 +13,14 @@ function showPicture() {
     file.style.display = 'none';
     picture.style.display = 'block';
 }
+
+// update status
+function setStatus() {
+    document.getElementById('status').innerHTML = 'Status: loading...'
+}
+
+function formatText() {
+    var text = document.getElementById('text-body');
+    // regex to convert text to HTML display format
+    text = text.replace(/(?:\r\n|\r|\n)/g, '<br>');
+}

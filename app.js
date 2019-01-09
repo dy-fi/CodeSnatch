@@ -28,6 +28,7 @@ app.use(fileUpload());
 
 // MIDDLEWARE body parser
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json())
 
 // MIDDLEWARE cookie parser
 app.use(cookieParser());

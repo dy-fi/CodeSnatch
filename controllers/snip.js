@@ -1,20 +1,11 @@
 const express = require('express');
-
 const tesseract = require('tesseract.js');
-const repl = require('replit-client');
-const fs = require('fs');
 
-
+// models
 const User = require('../models/user');
 
-function base64_encode(file) {
-    // image data of file
-    var bitmap = fs.readFileSync(file);
-    // bitmap of image to base64 string
-    return new Buffer(bitmap).toString('base64');
-}
 
-// Will also hander root index
+// Will also handle root index
 module.exports = (app) => {
 
     // index
@@ -38,11 +29,21 @@ module.exports = (app) => {
         var currentUser = req.user;
         var image = req.files.file.data;
 
+        // tesseract is passed image data
         tesseract.recognize(image)
             .progress(message => console.log(message))
             .then(result => {
                 text = result.text;
                 console.log(text);
+
+                evaluation = eval(text);
+
+                res.render('frame', {
+                    currentUser,
+                    text,
+                    evaluation,
+                    status: true,
+                })
             }).catch(e => {
                 console.log(e);
             })
