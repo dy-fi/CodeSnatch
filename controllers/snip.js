@@ -36,7 +36,16 @@ module.exports = (app) => {
                 text = result.text;
                 console.log(text);
 
-                evaluation = eval(text);
+                // only takes javascript for now
+                console.log('evaluating');
+
+                try {
+                    evaluation = eval(text)
+                } catch(err) {
+                    evaluation = err;
+                    console.log(err);
+                }
+
 
                 res.render('frame', {
                     currentUser,

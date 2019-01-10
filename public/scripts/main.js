@@ -22,5 +22,6 @@ function setStatus() {
 function formatText() {
     var text = document.getElementById('text-body');
     // regex to convert text to HTML display format
-    text = text.replace(/(?:\r\n|\r|\n)/g, '<br>');
+    text = text.innerHTML.replace(/(?:\r\n|\r|\n)/g, '<br>');
+
 }

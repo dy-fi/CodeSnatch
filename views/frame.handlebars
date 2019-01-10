@@ -28,4 +28,6 @@
     <p id='text-body' onload='formatText()'>{{text}}</p>
 {{/if}}
 
-<p id='code-body'></p>
+{{#if evaluation}}
+    <p id='code-body'>{{evaluation}}</p>
+{{/if}}
