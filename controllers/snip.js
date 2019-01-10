@@ -46,7 +46,6 @@ module.exports = (app) => {
                     console.log(err);
                 }
 
-
                 res.render('frame', {
                     currentUser,
                     text,
