@@ -19,6 +19,7 @@
     "jsonwebtoken": "^8.4.0",
     "mongoose": "^5.4.2",
     "replit-client": "^0.25.0",
+    "safe-eval": "^0.4.1",
     "tesseract.js": "^1.0.14"
   }
 }

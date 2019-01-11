@@ -1,3 +1,4 @@
+<!-- Upload navbar -->
 <div class='btn-group btn-group-toggle' data-toggle='buttons' id='interfaceToggle'>
     <label class='btn btn-secondary active' onclick='showFile()'>
         <input type='radio' name='options' id='file' autocomplete='off'  checked> File
@@ -7,12 +8,12 @@
     </label>
 </div>
 
-<br>
+<hr>
 
 {{>file-form}}
 
 <div class='row' id='pictureInterface' style='display:none'>
-    <div class="col-sm-4" >
+    <div class='col-sm-4' >
         <h2>picture interface here</h2>
     </div>
 </div>
@@ -20,14 +21,26 @@
 {{#if status}}
     <h4 id='status'>Status: Done</h4>
 {{else}}
-    <h4 id='status'>Status: </h4>
+    <h4 id='status'></h4>
 {{/if}}
 
 {{#if text}}
     <h3>This is what we got from the image: </h3>
     <p id='text-body' onload='formatText()'>{{text}}</p>
+    <br>
 {{/if}}
 
 {{#if evaluation}}
-    <p id='code-body'>{{evaluation}}</p>
+    <h3>Evaluates to: </h3><br>
+    <samp id='code-body'>{{evaluation}}</samp>
+
+{{#if currentUser}}
+    {{>snip-form}}
+{{else}}
+    <br>
+    <div class='alert alert-light' role='alert'>
+        Hey! Yea YOU! You would have had the option to save this if you just signed up :\
+        No worries though, you can take care of that <a href='/sign-up' class='alert-link'> right here!</a>
+    </div>
+{{/if}}
 {{/if}}

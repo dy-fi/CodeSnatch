@@ -4,12 +4,13 @@ const Schema = mongoose.Schema;
 require('../data/CodeSnatch-db');
 
 const SnipSchema = new Schema({
-    title: { type: String, required: true },
-    content: { type: String, required: true },
+    title: String,
+    author : { type: Schema.Types.ObjectId, ref: "User", required: true },
+    text: { type: String, required: true },
+    evaluation: {type: String, required: true},
     description: String,
     createdAt: { type: Date },
     updatedAt: { type: Date },
-    // author : { type: Schema.Types.ObjectId, ref: "User", required: true },
 });
 
 SnipSchema.pre("save", function(next) {
@@ -24,4 +25,4 @@ SnipSchema.pre("save", function(next) {
   next();
 });
 
-module.exports = ('Snip', SnipSchema);
+module.exports = mongoose.model('Snip', SnipSchema);

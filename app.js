@@ -24,7 +24,9 @@ require('./data/CodeSnatch-db');
 app.use(express.static('public'));
 
 // MIDDLEWARE file upload
-app.use(fileUpload());
+app.use(fileUpload({
+    safeFileNames: true,
+}));
 
 // MIDDLEWARE body parser
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -52,6 +54,7 @@ app.use(checkAuth);
 
 require('./controllers/snip')(app);
 require('./controllers/auth')(app);
+require('./controllers/frame')(app);
 
 // START
 app.listen(port, console.log("App listening on port " + port));
