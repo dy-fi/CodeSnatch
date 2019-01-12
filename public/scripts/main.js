@@ -15,8 +15,8 @@ function showPicture() {
 }
 
 // update status
-function setStatus() {
-    document.getElementById('status').innerHTML = 'Status: loading...'
+function setStatus(message) {
+    document.getElementById('status').innerHTML = 'Status: loading...';
 }
 
 function formatText() {
