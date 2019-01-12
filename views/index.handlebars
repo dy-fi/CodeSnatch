@@ -1,11 +1,20 @@
-<h1>CodeSnatch</h1></hr>
-<p>Write code anywhere... and run it too</p>
 
-{{#if currentUser}}
-    <a href="/logout"><button class="btn btn-danger">Log out</button></a>
-{{else}}
-    <a href="/login"><button class="btn btn-info">Log in</button></a>
-    <a href="/sign-up"><button class="btn btn-success">Sign Up</button></a>
-{{/if}}
 
-<a href="/frame"><button class="btn btn-primary">Snatch</button></a>
+<div class='row'>
+    <div class='col-sm-4'>
+        <img src='./resources/camera_icon.png' alt='image not available'>
+    </div>
+    <div class='col-sm-4 offset-sm-2 title-banner'>
+        <h1><a id='Code'>Code</a><a id='snatch'>Snatch</a></h1></hr>
+        <p>Write code anywhere... and run it too</p>
+
+        {{#if currentUser}}
+            <a href="/logout"><button class="btn btn-danger">Log out</button></a>
+        {{else}}
+            <a href="/login"><button class="btn btn-info">Log in</button></a>
+            <a href="/sign-up"><button class="btn btn-success">Sign Up</button></a>
+        {{/if}}
+
+        <a href="/frame"><button class="btn btn-primary">Snatch</button></a>
+    </div>
+</div>

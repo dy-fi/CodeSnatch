@@ -1,0 +1,23 @@
+body {
+    background-color: #3074B7;
+}
+
+.title-banner {
+    color: #FFDA29;
+}
+
+.title-banner h1 {
+    font-size: 48px;
+}
+
+.container {
+    padding-top: 10%;
+}
+
+#Code {
+    font-family: 'Source Code Pro', monospace;
+}
+
+#snatch {
+    font-family: 'Vibur', cursive;
+}

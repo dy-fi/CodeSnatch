@@ -47,7 +47,6 @@ module.exports = (app) => {
                         user.save()
                         res.redirect('/snip/' + snip._id);
                     }).catch(console.err);
-
         } else {
             res.status(401).send('This functionality is restricted to users only')
         }
