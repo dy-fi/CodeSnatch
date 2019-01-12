@@ -1,4 +1,6 @@
 # Shout App
+[current live prototype](https://codesnatch.herokuapp.com/)
+
 ##### Write code anywhere and run it too!
 
 Upload or snap a picture of code and have it run for you
@@ -34,4 +36,4 @@ nodemon app.js
 The app should now be running on [localhost:3000](http://localhost:3000/). Make sure MongoDB is installed and MongoDB Daemon is running.
 
 > (coming soon...)
-> [App and API documentation](https://dy-fi.github.io/CodeSnatch/#/)
+> [App documentation](https://dy-fi.github.io/CodeSnatch/#/)
