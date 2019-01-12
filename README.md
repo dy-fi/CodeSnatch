@@ -1,5 +1,5 @@
 # CodeSnatch
-[current live prototype](https://codesnatch.herokuapp.com/)
+[current live prototype](https://codesnatch.herokuapp.com/) Does not currently convert properly due to process size limit on heroku
 
 ##### Write code anywhere and run it too!
 
