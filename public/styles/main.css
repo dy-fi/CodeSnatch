@@ -21,3 +21,19 @@ body {
 #snatch {
     font-family: 'Vibur', cursive;
 }
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: 6F42FF;
+  text-align: center;
+  font-size: 12px;
+}
+
+.footer a {
+    color: #FFDA29;
+    margin: auto;
+    text-align: center;
+}
