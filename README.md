@@ -1,4 +1,4 @@
-# Shout App
+# CodeSnatch
 [current live prototype](https://codesnatch.herokuapp.com/)
 
 ##### Write code anywhere and run it too!
