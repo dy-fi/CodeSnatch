@@ -29,6 +29,14 @@ body {
     font-family: 'Vibur', cursive;
 }
 
+#fileInterface {
+    padding-top: 50px;
+}
+
+#file {
+    text-align: center;
+}
+
 .footer {
   position: fixed;
   left: 0;
