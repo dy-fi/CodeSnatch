@@ -1,46 +1,29 @@
 <!-- Upload navbar -->
-<div class='btn-group btn-group-toggle' data-toggle='buttons' id='interfaceToggle'>
-    <label class='btn btn-secondary active' onclick='showFile()'>
-        <input type='radio' name='options' id='file' autocomplete='off'  checked> File
-    </label>
-    <label class='btn btn-secondary' onclick='showPicture()'>
-        <input type='radio' name='options' id='picture' autocomplete='off'> Picture
-    </label>
+
+<div class='output'>
+    {{#if text}}
+        <h3>This is what we got from the image: </h3>
+
+        <div id='text-body'>
+            <textarea cols='50' rows='4' readonly>{{text}}</textarea>
+        </div>
+        <br>
+    {{/if}}
+
+    {{#if evaluation}}
+        <h3>Evaluates to: </h3><br>
+        <div id='code-body'>
+            <code><textarea cols='50' rows = '4' readonly>{{evaluation}}</textarea></code>
+        </div>
+    {{/if}}
 </div>
-
-<hr>
-
-{{>file-form}}
-
-<div class='row' id='pictureInterface' style='display:none'>
-    <div class='col-sm-4' >
-        <h2>picture interface here</h2>
-    </div>
-</div>
-
-{{#if status}}
-    <h4 id='status'>Status: Done</h4>
-{{else}}
-    <h4 id='status'></h4>
-{{/if}}
-
-{{#if text}}
-    <h3>This is what we got from the image: </h3>
-    <p id='text-body'>{{text}}</p>
-    <br>
-{{/if}}
-
-{{#if evaluation}}
-    <h3>Evaluates to: </h3><br>
-    <samp id='code-body'>{{evaluation}}</samp>
 
 {{#if currentUser}}
     {{>snip-form}}
 {{else}}
     <br>
     <div class='alert alert-light' role='alert'>
-        Hey! Yea YOU! You would have had the option to save this if you just signed up :\
-        No worries though, you can take care of that <a href='/sign-up' class='alert-link'> right here!</a>
+        <p>Hey! Yea YOU! You would have had the option to save this if you just signed up :\
+        No worries though, you can take care of that <a href='/sign-up' class='alert-link'> right here!</a></p>
     </div>
-{{/if}}
 {{/if}}

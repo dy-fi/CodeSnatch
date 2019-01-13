@@ -17,6 +17,7 @@ module.exports = (app) => {
     })
 
     app.post('/frame', (req, res) => {
+
         var currentUser = req.user;
 
         // image and image data buffer
@@ -44,7 +45,6 @@ module.exports = (app) => {
                     currentUser,
                     text,
                     evaluation,
-                    status: true,
                 })
             }).catch(e => {
                 console.log(e);

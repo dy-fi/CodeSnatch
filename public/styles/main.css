@@ -14,6 +14,13 @@ body {
     padding-top: 10%;
 }
 
+.output textarea {
+    resize: none;
+    border-left: 6px solid red;
+    background-color: lightgrey;
+}
+
+
 #Code {
     font-family: 'Source Code Pro', monospace;
 }
@@ -36,4 +43,8 @@ body {
     color: #FFDA29;
     margin: auto;
     text-align: center;
+}
+
+.alert {
+    margin: auto;
 }
