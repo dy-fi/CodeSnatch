@@ -2,8 +2,15 @@
     <a href='/'><h1 class='navbar-brand mb-0'>CodeSnatch</h1></a>
     <ul class="nav navbar-nav">
         {{#if currentUser}}
-            <small>Hi, {{currentUser.username}}</small>
-            <li class='nav-item'><a href="/logout">Logout</a></li>
+            <div class="btn-group dropright">
+                <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown">
+                    Hi, {{currentUser.username}}
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="/users/{{currentUser.username}}">Profile</a>
+                    <a class="dropdown-item" href="/logout">Log Out</a>
+                </div>
+            </div>
         {{else}}
             <p>
                 <a href="/login"><button class="btn btn-info">Log in</button></a>
