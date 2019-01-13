@@ -14,9 +14,9 @@ Upload or snap a picture of code and have it run for you
 |-------------------|:-------------------------:|
 | users             | :white_check_mark:        |
 | save snips        | :white_check_mark:        |
-| camera support    | :small_orange_diamond:    |
+| camera support    | :white_check_mark:        |
 | python support    | :small_orange_diamond:    |
-| improved UI       | :small_orange_diamond:    |
+| improved UI       | :white_check_mark:        |
 | support for C++   | :small_orange_diamond:    |
 
 
