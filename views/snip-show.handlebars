@@ -18,23 +18,3 @@
         <p>{{snip.description}}</p>
     {{/if}}
 </div>
-
-
-
-
-
-{{#if text}}
-    <h3>This is what we got from the image: </h3>
-
-    <div id='text-body'>
-        <textarea cols='50' rows='4' readonly>{{text}}</textarea>
-    </div>
-    <br>
-{{/if}}
-
-{{#if evaluation}}
-    <h3>Evaluates to: </h3><br>
-    <div id='code-body'>
-        <code><textarea cols='50' rows = '4' readonly>{{evaluation}}</textarea></code>
-    </div>
-{{/if}}
