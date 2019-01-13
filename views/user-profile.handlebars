@@ -1,0 +1,10 @@
+<div class='row'>
+    {{#each user.snips}}
+        {{#if user.snips.title}}
+            <a href='/snips/{{user.snips._id}}'>{{user.snips.title}}</a>
+        {{else}}
+            <a href='/snips/{{user.snips._id}}'>Untitled</a>
+        {{/if}}
+        created: {{user.snips.createdAt}}
+    {{/each}}
+</div>
