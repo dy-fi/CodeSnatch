@@ -1,11 +1,40 @@
-{{#if snip.title}}
-    <h2>{{snip.title}}</h2>
-    <hr>
-{{/if}}
-{{snip.text}}
-<hr>
-<samp>{{snip.evaluation}}<samp>
+<div class='output'>
+    {{#if snip.title}}
+        <h2>{{snip.title}}</h2>
+        <hr>
+    {{/if}}
 
-{{#if snip.description}}
-    <p>{{snip.description}}</p>
+    <div id='text-body'>
+        <h4>Text</h4>
+        <textarea cols='50' rows='4' readonly>{{snip.text}}</textarea>
+    </div>
+    <div id='code-body'>
+        <h4>Output</h4>
+        <code><textarea cols='50' rows = '4' readonly>{{snip.evaluation}}</textarea></code>
+    </div>
+
+    {{#if snip.description}}
+        <br>
+        <p>{{snip.description}}</p>
+    {{/if}}
+</div>
+
+
+
+
+
+{{#if text}}
+    <h3>This is what we got from the image: </h3>
+
+    <div id='text-body'>
+        <textarea cols='50' rows='4' readonly>{{text}}</textarea>
+    </div>
+    <br>
+{{/if}}
+
+{{#if evaluation}}
+    <h3>Evaluates to: </h3><br>
+    <div id='code-body'>
+        <code><textarea cols='50' rows = '4' readonly>{{evaluation}}</textarea></code>
+    </div>
 {{/if}}

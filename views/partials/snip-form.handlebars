@@ -1,16 +1,15 @@
-<form method='POST' action='/snip' class='form-style col-sm-6'>
-    <input type='hidden' name='text' value='{{text}}'>
-    <input type='hidden' name='evaluation' value='{{evaluation}}'>
+<div class='row'>
+    <form method='POST' action='/snip' class='form-style col-sm-6'>
+        <input type='hidden' name='text' value='{{text}}'>
+        <input type='hidden' name='evaluation' value='{{evaluation}}'>
 
-    <div class="input-group input-group-sm mb-3">
-        <div class="input-group-prepend">
-            <span class="input-group-text" id="inputGroup-sizing-sm">Add a description</span>
-        </div>
+        <label for='description'>Description (optional)</label>
         <textarea type='text' class="form-control" type='text' name='description' value="{{snip.description}}"></textarea>
-    </div>
 
-    <!-- SUBMIT -->
-    <div class="form-group">
-        <button class="btn btn-primary" type="submit">Save snip</button>
-    </div>
-</form>
+        <br>
+        <!-- SUBMIT -->
+        <div class="form-group">
+            <button class="btn btn-primary" type="submit">Save snip</button>
+        </div>
+    </form>
+</div>
