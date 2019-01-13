@@ -35,5 +35,6 @@ nodemon app.js
 ```
 The app should now be running on [localhost:3000](http://localhost:3000/). Make sure MongoDB is installed and MongoDB Daemon is running.
 
+-----
 > (coming soon...)
 > [App documentation](https://dy-fi.github.io/CodeSnatch/#/)
