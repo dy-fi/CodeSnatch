@@ -25,8 +25,11 @@ module.exports = (app) => {
         var buffer = image.data;
 
         // tesseract is passed image data
-        tesseract.recognize(buffer)
+        tesseract.recognize(buffer, {
+            lang: 'eng',
+        })
             .progress(message => console.log(message))
+            .catch(err =>  console.log(err))
             .then(result => {
                 text = result.text;
                 console.log(text);

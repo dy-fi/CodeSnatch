@@ -19,6 +19,7 @@ Upload or snap a picture of code and have it run for you
 | improved UI       | :white_check_mark:        |
 | support for C++   | :small_orange_diamond:    |
 | user profiles     | :small_orange_diamond:    |
+| improved OCR      | :small_orange_diamond:    |
 
 This project is in developement and more features will be added in the future.  Stay tuned!
 
