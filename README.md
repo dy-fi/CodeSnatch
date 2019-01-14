@@ -17,7 +17,7 @@ Upload or snap a picture of code and have it run for you
 | camera support    | :white_check_mark:        |
 | python support    | :small_orange_diamond:    |
 | improved UI       | :white_check_mark:        |
-| support for C++   | :small_orange_diamond:    |
+| C++ support       | :small_orange_diamond:    |
 | user profiles     | :white_check_mark:        |
 | improved OCR      | :small_orange_diamond:    |
 
