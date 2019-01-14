@@ -5,17 +5,24 @@
     </div>
 
     <div class='col-sm-4 offset-sm-2 title-banner'>
-        <h1><a id='Code'>Code</a><a id='snatch'>Snatch</a></h1>
+        <div id='title-display'>
+            <h1 id='title'><a id='Code'>CodeSnatch</a></h1>
+            <span id='typed-title'></span>
+        </div>
         <p>Write code anywhere... and run it too <br> (currently only runs javascript)</p>
 
 
         <br>
 
         {{>file-form}}
-
-        <div id='loading' style='display:none'>
-            <h3> Loading </h3>
-        </div>
     </div>
-
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+<script>
+  var typed = new Typed('#typed-title', {
+    stringsElement: '#title',
+    typeSpeed: 100,
+    showCursor: false,
+  });
+</script>

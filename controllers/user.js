@@ -6,10 +6,11 @@ const User = require('../models/users');
 module.exports = (app) => {
 
     // get user profile
-    app.get('/users/:username', (req, res) => {
+    app.get('/users/:id', (req, res) => {
+        console.log("asdfsdfsd");
         var currentUser = req.user;
 
-        User.find({ username: req.params.username })
+        User.findById(req.params.id)
             .populate('snips')
             .then(user => {
                 res.render('user-profile', {

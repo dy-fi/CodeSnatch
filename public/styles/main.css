@@ -20,16 +20,25 @@ body {
     background-color: lightgrey;
 }
 
-#Code {
+#typed-title {
     font-family: 'Source Code Pro', monospace;
-}
-
-#snatch {
-    font-family: 'Vibur', cursive;
+    font-size: 48px;
 }
 
 #fileInterface {
     padding-top: 40px;
+    margin-top: 30%;
+}
+
+#title-display {
+    position: absolute;
+}
+
+.title-banner p {
+    position: absolute;
+    height: auto;
+    margin-top: 17%;
+
 }
 
 .footer {

@@ -21,6 +21,7 @@
     "mongoose": "^5.4.2",
     "replit-client": "^0.25.0",
     "safe-eval": "^0.4.1",
-    "tesseract.js": "^1.0.14"
+    "tesseract.js": "^1.0.14",
+    "typed.js": "^2.0.9"
   }
 }
