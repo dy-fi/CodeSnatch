@@ -55,6 +55,7 @@ app.use(checkAuth);
 require('./controllers/snip')(app);
 require('./controllers/auth')(app);
 require('./controllers/frame')(app);
+require('./controllers/user')(app);
 
 // START
 app.listen(port, console.log("App listening on port " + port));

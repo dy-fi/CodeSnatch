@@ -7,7 +7,7 @@ const UserSchema = new Schema({
   updatedAt: { type: Date },
   password: { type: String, select: false, required: true },
   username: { type: String, required: true },
-  snips: [{ type: Schema.Types.ObjectId, ref: "Snip" }],
+  snips: [{ type: Schema.Types.ObjectId, ref: "Snip"}],
 });
 
 // Must use function here! ES6 => functions do not bind this!

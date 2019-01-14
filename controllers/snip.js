@@ -21,7 +21,9 @@ module.exports = (app) => {
     app.get('/snip/:id', (req, res) => {
         currentUser = req.user;
 
-        Snip.findById(req.params.id).then(snip => {
+        Snip.findById(req.params.id)
+        .populate('author')
+        .then(snip => {
             res.render('snip-show', {
                 currentUser,
                 snip,
