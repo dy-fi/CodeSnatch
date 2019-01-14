@@ -5,7 +5,7 @@ require('../data/CodeSnatch-db');
 
 const SnipSchema = new Schema({
     title: String,
-    author : { type: Schema.Types.ObjectId, ref: "User", required: true },
+    author : { type: Schema.Types.ObjectId, ref: 'User', required: true },
     text: { type: String, required: true },
     evaluation: {type: String, required: true},
     description: String,
@@ -13,7 +13,7 @@ const SnipSchema = new Schema({
     updatedAt: { type: Date },
 });
 
-SnipSchema.pre("save", function(next) {
+SnipSchema.pre('save', function(next) {
   // SET createdAt AND updatedAt
   const now = new Date();
   this.updatedAt = now;

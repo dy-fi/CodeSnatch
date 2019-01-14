@@ -37,10 +37,10 @@ app.use(cookieParser());
 
 // MIDDLEWARE authentication
 var checkAuth = (req, res, next) => {
-    console.log("Checking authentication...");
-    if (typeof req.cookies.nToken === "undefined" || req.cookies.nToken === null) {
+    console.log('Checking authentication...');
+    if (typeof req.cookies.nToken === 'undefined' || req.cookies.nToken === null) {
         req.user = null;
-        console.log("Auth Failed")
+        console.log('Auth Failed')
     } else {
         var token = req.cookies.nToken;
         var decodedToken = jwt.decode(token, { complete: true }) || {};
@@ -58,6 +58,6 @@ require('./controllers/frame')(app);
 require('./controllers/user')(app);
 
 // START
-app.listen(port, console.log("App listening on port " + port));
+app.listen(port, console.log('App listening on port ' + port));
 
 module.exports = app;
