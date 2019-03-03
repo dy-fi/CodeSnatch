@@ -21,7 +21,7 @@ Upload or snap a picture of code and have it run for you
 | user profiles     | :white_check_mark:        |
 | improved OCR      | :small_orange_diamond:    |
 
-This project is in developement and more features will be added in the future.  Stay tuned!
+This project is in development and more features will be added in the future.  Stay tuned!
 
 -----
 
