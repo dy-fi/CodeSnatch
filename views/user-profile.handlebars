@@ -1,5 +1,18 @@
 <h1>{{user.username}}</h1><hr>
+{{> searchbox}}
+{{#each snips}}
+    {{#if user.snips.title}}
+    <a href='/snip/{{this._id}}'>{{this.title}}</a>
+    <br>
+    {{else}}
+    <a href='/snip/{{this._id}}'>Untitled</a>
+    <br>
+    {{/if}}
+    <small>{{this.description}}</small>
+    <hr>
+{{/each}}
 
+<hr>
 {{#each user.snips}}
     {{#if user.snips.title}}
     <a href='/snip/{{this._id}}'>{{this.title}}</a>

@@ -9,8 +9,8 @@ const cookieParser = require('cookie-parser');
 const jwt = require('jsonwebtoken');
 const fileUpload = require('express-fileupload');
 
+// export/environment
 const app = express();
-
 port = process.env.PORT || 3000;
 
 // Express handlebars
@@ -52,6 +52,7 @@ var checkAuth = (req, res, next) => {
 
 app.use(checkAuth);
 
+// controllers
 require('./controllers/snip')(app);
 require('./controllers/auth')(app);
 require('./controllers/frame')(app);

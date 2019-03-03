@@ -1,12 +1,12 @@
 <div class='row'>
-    <form method='POST' action='/snip' class='form-style col-sm-6'>
-        <input type='hidden' name='text' value='{{text}}'>
-        <input type='hidden' name='evaluation' value='{{evaluation}}'>
+    <form method='POST' action='#' class='form-style col-sm-6' id='snip-new'>
+        <input type='hidden' name='text' value='{{text}}' required>
+        <input type='hidden' name='evaluation' value='{{evaluation}}' required>
 
-        <label for='title'>Title (optional) </label>
+        <label for='title'>Title</label>
         <input type='text' class='form-control' name='title' value='title'></input>
 
-        <label for='description'>Description (optional)</label>
+        <label for='description'>Description</label>
         <textarea type='text' class='form-control' type='text' name='description' value='{{snip.description}}'></textarea>
 
         <br>

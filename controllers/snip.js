@@ -31,6 +31,15 @@ module.exports = (app) => {
         })
     })
 
+    app.get('/search', (req, res) => {
+
+        term = new RegExp(req.query.term, 'i')
+
+        Snip.find({'title': term, author: req.user }).exec((err, snips) => {
+            res.render('user-profile', { snips: snips });
+        })
+    });
+
     // save a snip
     app.post('/snip', (req, res) => {
         if (req.user) {
