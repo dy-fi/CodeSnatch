@@ -3,7 +3,6 @@
 <div class='output'>
     {{#if text}}
         <h3>This is what we got from the image: </h3>
-
         <div id='text-body'>
             <textarea cols='50' rows='4' readonly>{{text}}</textarea>
         </div>
@@ -11,9 +10,14 @@
     {{/if}}
 
     {{#if evaluation}}
-        <h3>Evaluates to: </h3><br>
+        <h3>Which evaluates to: </h3><br>
         <div id='code-body'>
             <code><textarea cols='50' rows = '4' readonly>{{evaluation}}</textarea></code>
+        </div>
+        <div>
+            cpuTime: {{ cpuTime }} ms
+            <br>
+            memory: {{ memory }} mb
         </div>
     {{/if}}
 </div>

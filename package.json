@@ -23,7 +23,7 @@
     "passport": "^0.4.0",
     "passport-github2": "^0.1.11",
     "passport-local": "^1.0.0",
-    "safe-eval": "^0.4.1",
+    "request": "^2.88.0",
     "tesseract.js": "^1.0.14",
     "typed.js": "^2.0.9"
   }
