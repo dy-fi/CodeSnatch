@@ -14,19 +14,21 @@ module.exports = (app) => {
         // image and image data buffer
         var image = req.files.file;
         var buffer = image.data;
+        var language = req.body.language;
+        console.log(language);
 
         // tesseract is passed image data
         tesseract.recognize(buffer, {lang: 'eng'})
             .progress(message => console.log(message))
             .catch(err => console.log(err))
             .then(result => {
-                text = "print(\"Hello World\")";
+                text = result.text;
                 console.log(text);
 
                 // json packaging for API call
                 var submission = {
                     script: text,
-                    language: "python3",
+                    language: language,
                     versionIndex: "0",
                     clientId: process.env.JDOODLE_ID,
                     clientSecret: process.env.JDOODLE_SECRET

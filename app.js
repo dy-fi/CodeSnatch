@@ -62,6 +62,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // controllers
+require('./controllers/index')(app);
 require('./controllers/snip')(app);
 require('./controllers/frame')(app);
 require('./controllers/user')(app);

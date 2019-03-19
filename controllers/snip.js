@@ -8,15 +8,6 @@ const Snip = require('../models/snips');
 // Will also handle root index
 module.exports = (app) => {
 
-    // index
-    app.get('/', (req, res) => {
-        var currentUser = req.user;
-
-        res.render('index', {
-            currentUser,
-        });
-    })
-
     // get a single snip and display it
     app.get('/snip/:id', (req, res) => {
         currentUser = req.user;

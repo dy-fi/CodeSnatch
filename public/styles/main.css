@@ -12,6 +12,7 @@ body {
 
 .container {
     padding-top: 10%;
+    margin: auto;
 }
 
 .output textarea {
