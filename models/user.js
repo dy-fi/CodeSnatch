@@ -1,15 +1,18 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
+const findOrCreate = require('mongoose-find-or-create');
 const Schema = mongoose.Schema;
 
 const UserSchema = new Schema({
   createdAt: { type: Date },
   updatedAt: { type: Date },
-  password: { type: String, select: false, required: true },
-  username: { type: String, required: true,  minlength: 3 },
+  password: { type: String, select: false },
+  username: { type: String, required: true,  minlength: 3, unique: true },
   snips: [{ type: Schema.Types.ObjectId, ref: 'Snip'}],
+  githubId: { type: String, select: false, unique: true },
 });
 
+UserSchema.plugin(findOrCreate)
 
 UserSchema.pre('save', function(next) {
   // SET createdAt AND updatedAt
@@ -32,11 +35,9 @@ UserSchema.pre('save', function(next) {
   });
 });
 
-// Need to use function to enable this.password to work.
-UserSchema.methods.comparePassword = function(password, done) {
-  bcrypt.compare(password, this.password, (err, isMatch) => {
-    done(err, isMatch);
-  });
+UserSchema.methods.validPassword = function(password) {
+    const user = this;
+    return bcrypt.compareSync(password, user.password);
 };
 
 module.exports = mongoose.model('User', UserSchema);

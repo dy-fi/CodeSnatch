@@ -60,3 +60,15 @@ body {
 .alert {
     margin: auto;
 }
+
+#dropdownMenuButton {
+    position: sticky;
+}
+
+#github-button {
+    width: 200px;
+    height: 200px;
+    border: 2px solid;
+    border-radius: 5px;
+    margin-left: 4em;
+}

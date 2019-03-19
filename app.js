@@ -5,9 +5,9 @@ require('dotenv').config();
 const express = require('express');
 const exphbs = require('express-handlebars');
 const bodyParser = require('body-parser');
-const cookieParser = require('cookie-parser');
-const jwt = require('jsonwebtoken');
 const fileUpload = require('express-fileupload');
+const session = require('express-session');
+const passport = require('passport');
 
 // export/environment
 const app = express();
@@ -30,33 +30,41 @@ app.use(fileUpload({
 
 // MIDDLEWARE body parser
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json())
 
-// MIDDLEWARE cookie parser
-app.use(cookieParser());
+// AUTHENTICATION
 
-// MIDDLEWARE authentication
-var checkAuth = (req, res, next) => {
-    console.log('Checking authentication...');
-    if (typeof req.cookies.nToken === 'undefined' || req.cookies.nToken === null) {
-        req.user = null;
-        console.log('Auth Failed')
-    } else {
-        var token = req.cookies.nToken;
-        var decodedToken = jwt.decode(token, { complete: true }) || {};
-        req.user = decodedToken.payload;
-    }
+// passport config
+require('./passport')(passport);
 
-    next();
-};
+// session storage
+var MongoDBStore = require('connect-mongodb-session')(session);
 
-app.use(checkAuth);
+var store = new MongoDBStore({
+  uri: process.env.MONGODB_URI || 'mongodb://localhost:27017/CodeSnatch-db',
+  collection: 'sessions',
+});
+
+// session
+app.use(session({
+    secret: process.env.SESSION_SECRET,
+    resave: false,
+    saveUninitialized: false,
+    store: store,
+    cookie: {
+        // maxAge: 360000 // an hour
+        //secure: true,   // turn this on in production
+    },
+}));
+
+// passport init
+app.use(passport.initialize());
+app.use(passport.session());
 
 // controllers
 require('./controllers/snip')(app);
-require('./controllers/auth')(app);
 require('./controllers/frame')(app);
 require('./controllers/user')(app);
+require('./controllers/auth')(app, passport);
 
 // START
 app.listen(port, console.log('App listening on port ' + port));
