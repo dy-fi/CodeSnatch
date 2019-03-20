@@ -1,28 +1,13 @@
-# CodeSnatch
-[current live prototype](https://codesnatch.herokuapp.com/) Does not currently convert properly due to process size limit on heroku
+# [CodeSnatch (V.2)](https://codesnatch.herokuapp.com/)
+Live deployment oes not currently convert properly due to process size limit on heroku
 
-##### Write code anywhere and run it too!
-
-Upload or snap a picture of code and have it run for you
-
+Upload or snap a picture of code and execute it
 
 -----
 
-#### Roadmap
-
-| feature           | status                    |
-|-------------------|:-------------------------:|
-| users             | :white_check_mark:        |
-| save snips        | :white_check_mark:        |
-| camera support    | :white_check_mark:        |
-| python support    | :small_orange_diamond:    |
-| improved UI       | :white_check_mark:        |
-| C++ support       | :small_orange_diamond:    |
-| user profiles     | :white_check_mark:        |
-| improved OCR      | :small_orange_diamond:    |
-
-This project is in development and more features will be added in the future.  Stay tuned!
-
+## New features in V.2
+* multiple language support
+* fixed code execution
 -----
 
 ## Running Locally
@@ -36,7 +21,14 @@ nodemon app.js
 ```
 The app should now be running on [localhost:3000](http://localhost:3000/). Make sure MongoDB is installed and MongoDB Daemon is running.
 
------
+---
 
-> (coming soon...)
-> [App documentation](https://dy-fi.github.io/CodeSnatch/#/)
+### Built With
+
+* [NodeJS](https://nodejs.org/en/) - web framework
+* [Tesseract](http://tesseract.projectnaptha.com/) - OCR
+* [JDoodle](https://www.jdoodle.com/compiler-api/) - Compiler API
+* [Passport](http://www.passportjs.org/) - Authentication layer
+
+### Author
+Dylan Finn | [Github](github.com/dy-fi) | [LinkedIn](https://www.linkedin.com/in/dylan-finn-a36b9614b/) | [Portfolio](https://www.makeschool.com/portfolio/Dylan-Finn)

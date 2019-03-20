@@ -14,6 +14,7 @@ module.exports = (app) => {
         // image and image data buffer
         var image = req.files.file;
         var buffer = image.data;
+
         var language = req.body.language;
         console.log(language);
 
