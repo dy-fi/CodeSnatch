@@ -2,6 +2,10 @@ body {
     background-color: #3074B7;
 }
 
+.container {
+    padding-top: 10%;
+}
+
 .title-banner {
     color: #FFDA29;
 }
@@ -10,37 +14,25 @@ body {
     font-size: 48px;
 }
 
-.container {
-    padding-top: 10%;
-    margin: auto;
-    position: relative
+.title-banner p {
+    position: absolute;
+    height: auto;
+    margin-top: 17%;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .title-banner {
+        text-align: center;
+    }
+    .title-banner p {
+        padding-left: 3em;
+    }
 }
 
 .output textarea {
     resize: none;
     border-left: 6px solid red;
     background-color: lightgrey;
-}
-
-#typed-title {
-    font-family: 'Source Code Pro', monospace;
-    font-size: 48px;
-}
-
-#fileInterface {
-    margin-top: 15%;
-}
-
-#title-display {
-    position: absolute;
-    margin: auto;
-}
-
-.title-banner p {
-    position: absolute;
-    height: auto;
-    margin-top: 17%;
-
 }
 
 .footer {
@@ -56,6 +48,7 @@ body {
     color: #FFDA29;
     text-align: center;
     bottom: 3;
+    margin: auto;
 }
 
 .alert {
@@ -72,4 +65,20 @@ body {
     border: 2px solid;
     border-radius: 5px;
     margin-left: 4em;
+}
+
+#typed-title {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 48px;
+}
+
+#fileInterface {
+    margin-top: 15%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#title-display {
+    position: absolute;
+    margin: auto;
 }
