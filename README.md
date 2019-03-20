@@ -1,5 +1,4 @@
 # [CodeSnatch (V.2)](https://codesnatch.herokuapp.com/)
-Live deployment oes not currently convert properly due to process size limit on heroku
 
 Upload or snap a picture of code and execute it
 
