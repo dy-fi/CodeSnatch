@@ -23,9 +23,8 @@ The app should now be running on [localhost:3000](http://localhost:3000/). Make 
 
 ---
 
-### Built With
-
-* [NodeJS](https://nodejs.org/en/) - web framework
+## Built With
+* [NodeJS](https://nodejs.org/en/) - Web framework
 * [Tesseract](http://tesseract.projectnaptha.com/) - OCR
 * [JDoodle](https://www.jdoodle.com/compiler-api/) - Compiler API
 * [Passport](http://www.passportjs.org/) - Authentication layer
