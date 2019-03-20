@@ -29,5 +29,7 @@ The app should now be running on [localhost:3000](http://localhost:3000/). Make 
 * [JDoodle](https://www.jdoodle.com/compiler-api/) - Compiler API
 * [Passport](http://www.passportjs.org/) - Authentication layer
 
+---
+
 ### Author
 Dylan Finn | [Github](github.com/dy-fi) | [LinkedIn](https://www.linkedin.com/in/dylan-finn-a36b9614b/) | [Portfolio](https://www.makeschool.com/portfolio/Dylan-Finn)
