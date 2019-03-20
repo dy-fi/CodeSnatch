@@ -9,11 +9,8 @@ Upload or snap a picture of code and execute it
 * optimized, much faster than V.1 (heroku can handle it now!)
 * multiple language support
 * fixed code execution
-<<<<<<< HEAD
 * formatted for mobile
-=======
 
->>>>>>> frontend
 -----
 
 ## Running Locally
