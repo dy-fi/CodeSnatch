@@ -13,6 +13,7 @@ body {
 .container {
     padding-top: 10%;
     margin: auto;
+    position: relative
 }
 
 .output textarea {
@@ -27,12 +28,12 @@ body {
 }
 
 #fileInterface {
-    padding-top: 40px;
-    margin-top: 30%;
+    margin-top: 15%;
 }
 
 #title-display {
     position: absolute;
+    margin: auto;
 }
 
 .title-banner p {
@@ -43,19 +44,18 @@ body {
 }
 
 .footer {
-  position: fixed;
-  left: 0;
   bottom: 0;
   width: 100%;
   color: 6F42FF;
   text-align: center;
   font-size: 12px;
+  margin-top: 30%;
 }
 
 .footer a {
     color: #FFDA29;
-    margin: auto;
     text-align: center;
+    bottom: 3;
 }
 
 .alert {
