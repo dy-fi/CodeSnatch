@@ -1,4 +1,5 @@
 # [CodeSnatch (V.2)](https://codesnatch.herokuapp.com/)
+Live build is now fully functional with 7 languages, and more to come
 
 Upload or snap a picture of code and execute it
 
@@ -7,6 +8,7 @@ Upload or snap a picture of code and execute it
 ## New features in V.2
 * multiple language support
 * fixed code execution
+
 -----
 
 ## Running Locally

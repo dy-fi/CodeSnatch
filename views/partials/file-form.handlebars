@@ -1,13 +1,11 @@
 <div id='fileInterface'>
     <form method='POST' action='/frame' encType='multipart/form-data'>
-        <fieldset>
 
             <div class='form-group'>
                 <input type='file' name='file' id='file' class='btn btn-outline-success btn-block' accept='image/*' required>
             </div>
 
             <div class='form-group'>
-                <label for='language'>Supported languages (select one)</label>
                 <select class='form-control' id='language' size='4' name='language' type='text' required>
                     <option value='python3'> Python 3 </option>
                     <option value='python2'> Python 2 </option>
@@ -19,7 +17,6 @@
                 </select>
             </div>
 
-        </fieldset>
         <!-- BUTTON -->
         <div class='form-group'>
             <button id='convert' class='btn btn-primary btn-block' type='submit' onclick='loading()'>Convert</button>
