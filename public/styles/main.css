@@ -20,15 +20,6 @@ body {
     margin-top: 17%;
 }
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-    .title-banner {
-        text-align: center;
-    }
-    .title-banner p {
-        padding-left: 3em;
-    }
-}
-
 .output textarea {
     resize: none;
     border-left: 6px solid red;
@@ -81,4 +72,13 @@ body {
 #title-display {
     position: absolute;
     margin: auto;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .title-banner {
+        text-align: center;
+    }
+    .title-banner p {
+        padding-left: 3em;
+    }
 }
