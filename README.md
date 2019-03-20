@@ -5,8 +5,10 @@ Upload or snap a picture of code and execute it
 -----
 
 ## New features in V.2
+* optimized, much faster than V.1 (heroku can handle it now!)
 * multiple language support
 * fixed code execution
+* formatted for mobile
 -----
 
 ## Running Locally
