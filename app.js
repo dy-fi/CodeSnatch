@@ -8,6 +8,7 @@ const bodyParser = require('body-parser');
 const fileUpload = require('express-fileupload');
 const session = require('express-session');
 const passport = require('passport');
+const morgan = require('morgan')
 
 // export/environment
 const app = express();
@@ -22,6 +23,8 @@ require('./data/CodeSnatch-db');
 
 // static scripts and styles in public
 app.use(express.static('public'));
+
+app.use(morgan('tiny'));
 
 // MIDDLEWARE file upload
 app.use(fileUpload({

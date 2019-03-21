@@ -30,7 +30,7 @@ module.exports = (app) => {
         res.redirect('/');
     })
 
-    app.get('/login-github', passport.authenticate('github', { failureRedirect: '/login' }), (req, res) => {
+    app.get('/login-github', passport.authenticate('github', { failureRedirect: 'login' }), (req, res) => {
         console.log(req.user);
         res.redirect('/');
     })

@@ -46,7 +46,7 @@ module.exports = (app) => {
 
                     var evaluation = body.output;
                     var cpuTime = body.cpuTime;
-                    var memory = body.memory;
+                    var memory = body.memory/10000;
 
                     res.render('frame', {
                         currentUser,
