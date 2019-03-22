@@ -36,7 +36,7 @@ module.exports = passport => {
     passport.use(new GithubStrategy({
         clientID: process.env.GITHUB_ID,
         clientSecret: process.env.GITHUB_SECRET,
-        callbackURL: "http://127.0.0.1:3000/login-github"
+        callbackURL: process.env.GITHUB_CALLBACK_URI,
     },
     function(accessToken, refreshToken, profile, cb) {
         newUser = new User ({
