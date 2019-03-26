@@ -53,11 +53,50 @@ module.exports = (app) => {
                         text,
                         evaluation,
                         cpuTime,
-                        memory
+                        memory,
+                        language,
                     })
                 });
             }).catch(e => {
                 console.log(e);
             })
+    })
+
+    app.post('/frame-refresh', (req, res) => {
+        currentUser = req.user;
+
+        language = req.body.language;
+        text = req.body.text;
+
+        var submission = {
+            script: text,
+            language: language,
+            versionIndex: "0",
+            clientId: process.env.JDOODLE_ID,
+            clientSecret: process.env.JDOODLE_SECRET
+        }
+
+        request({
+            url: 'https://api.jdoodle.com/execute',
+            method: "POST",
+            json: submission
+        }, function (error, response, body) {
+            console.log('error:', error);
+            console.log('statusCode:', response && response.statusCode);
+            console.log('body:', body);
+
+            var evaluation = body.output;
+            var cpuTime = body.cpuTime;
+            var memory = body.memory/10000;
+
+            res.render('frame', {
+                currentUser,
+                text,
+                evaluation,
+                cpuTime,
+                memory,
+                language,
+            })
+        });
     })
 }

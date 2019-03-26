@@ -20,6 +20,10 @@ body {
     margin-top: 18%;
 }
 
+.output button {
+    width: inherit;
+}
+
 .output textarea {
     resize: none;
     border-left: 6px solid red;

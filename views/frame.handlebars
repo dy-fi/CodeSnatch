@@ -3,14 +3,19 @@
 <div class='output'>
     {{#if text}}
         <h3>This is what we got from the image: </h3>
-        <div id='text-body'>
-            <textarea cols='50' rows='4' readonly>{{text}}</textarea>
-        </div>
+
+        <form method='POST' action='/frame-refresh' encType='multipart/form-data'>
+            <input type='hidden' name='language' value='{{language}}'>
+            <div id='text-body'>
+                <textarea name='text' cols='50' rows='4'>{{text}}</textarea>
+            </div>
+            <button class='btn btn-primary btn-block' type='submit'>Reload with editor code</button>
+        </form>
         <br>
     {{/if}}
 
     {{#if evaluation}}
-        <h3>Which evaluates to: </h3><br>
+        <h3>{{language}} interpreter: </h3><br>
         <div id='code-body'>
             <code><textarea cols='50' rows = '4' readonly>{{evaluation}}</textarea></code>
         </div>
