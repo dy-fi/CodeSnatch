@@ -1,5 +1,6 @@
 # [CodeSnatch (V.2)](https://codesnatch.herokuapp.com/)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/5611cf77548a46cd9bed1c82dd195f12)](https://www.codacy.com/app/dy-fi/CodeSnatch?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=dy-fi/CodeSnatch&amp;utm_campaign=Badge_Grade)
+
 Live build is now fully functional with 7 languages, and more to come
 
 Upload or snap a picture of code and execute it
