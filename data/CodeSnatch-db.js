@@ -2,7 +2,7 @@
 const mongoose = require('mongoose');
 assert = require('assert');
 
-const url = process.env.MONGODB_URI || 'mongodb://localhost/CodeSnatch-db';
+const url = process.env.MONGODB_URI || 'mongodb://mongo/CodeSnatch-db';
 mongoose.Promise = global.Promise;
 mongoose.connect(
     url,
