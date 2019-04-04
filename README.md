@@ -35,6 +35,7 @@ cd CodeSnatch
 docker-compose up --build
 ```
 Port 3000 is exposed in the Dockerfile and mapped to port 80 (HTTP) in the docker-compose file.  You can remap ports with `docker-compose up -p <host>:<target>`
+
 ---
 
 ## Built With
