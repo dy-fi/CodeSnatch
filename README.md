@@ -26,6 +26,14 @@ nodemon app.js
 ```
 The app should now be running on [localhost:3000](http://localhost:3000/). Make sure MongoDB is installed and MongoDB Daemon is running.
 
+## Running Locally With Docker
+Make sure you have [Docker](https://www.docker.com/) installed
+
+```sh
+git clone https://github.com/dy-fi/CodeSnatch
+cd CodeSnatch
+docker-compose up --build
+```
 ---
 
 ## Built With
