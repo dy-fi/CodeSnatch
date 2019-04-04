@@ -44,6 +44,10 @@ Port 3000 is exposed in the Dockerfile and mapped to port 80 (HTTP) in the docke
 * [JDoodle](https://www.jdoodle.com/compiler-api/) - Compiler API
 * [Passport](http://www.passportjs.org/) - Authentication layer
 
+## Deployed With
+* [Docker](https://www.docker.com/) - Containerization and Cluster Fabrication
+* [Digital Ocean](https://www.digitalocean.com/) - Cloud Server Hosting
+
 ---
 
 ### Author
