@@ -2,7 +2,7 @@
 const mongoose = require('mongoose');
 assert = require('assert');
 
-const url = process.env.MONGODB_URI || 'mongodb://mongo/CodeSnatch-db';
+const url = process.env.MONGODB_URI || 'mongodb://localhost/CodeSnatch-db';
 mongoose.Promise = global.Promise;
 mongoose.connect(
     url,
@@ -15,6 +15,6 @@ mongoose.connect(
     }
 );
 mongoose.connection.on('error', console.error.bind(console, 'MongoDB connection Error:'));
-mongoose.set('debug', true);
+// mongoose.set('debug', true); turn on for testing
 
 module.exports = mongoose.connection;

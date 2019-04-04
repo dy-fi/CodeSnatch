@@ -3,16 +3,29 @@ require('dotenv').config();
 
 // Declarations
 const express = require('express');
+const favicon = require('serve-favicon')
 const exphbs = require('express-handlebars');
 const bodyParser = require('body-parser');
 const fileUpload = require('express-fileupload');
 const session = require('express-session');
 const passport = require('passport');
-const morgan = require('morgan')
+const morgan = require('morgan');
+
+// // HTTPS
+// const https = require("https"),
+//   fs = require("fs");
+//
+// const options = {
+//   key: fs.readFileSync("SSL/privkey.pem"),
+//   cert: fs.readFileSync("SSL/fullchain.pem")
+// };
 
 // export/environment
 const app = express();
 port = process.env.PORT || 3000;
+
+// favicon
+app.use(favicon(__dirname + '/public/resources/favicon.ico'));
 
 // Express handlebars
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
@@ -56,7 +69,7 @@ app.use(session({
     store: store,
     cookie: {
         // maxAge: 360000 // an hour
-        //secure: true,   // turn this on in production
+        secure: true,   // turn this on in production
     },
 }));
 
@@ -64,6 +77,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
+// ROUTES
 // controllers
 require('./controllers/index')(app);
 require('./controllers/snip')(app);
@@ -73,5 +87,6 @@ require('./controllers/auth')(app, passport);
 
 // START
 app.listen(port, console.log('App listening on port ' + port));
+// https.createServer(options, app).listen(8080);
 
 module.exports = app;

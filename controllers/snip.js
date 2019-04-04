@@ -54,11 +54,6 @@ module.exports = (app) => {
         }
     })
 
-    // // update the current/saved snip (allows for using the linter to fix code within the app)
-    // app.put('/snip/:id', (req, res) => {
-    //
-    // })
-
     // delete a saved snip
     app.delete('/snip/:id', (req, res) => {
         // get the snip
