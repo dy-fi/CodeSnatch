@@ -1,26 +1,15 @@
 version: "3"
+
+version: "2"
+
 services:
-
-  nginx:
-    container_name: nginx
-    restart: unless-stopped
-    build:
-      context: .
-      dockerfile: Dockerfile-nginx
-    depends_on:
-      - web
-    ports:
-      - "80:80"
-      - "443:443"
-
   web:
     container_name: web
-    build:
-      context: .
-      dockerfile: Dockerfile
-    restart: unless-stopped
+
+    build: .
+    restart: always
     ports:
-        - "3000:3000"
+        - "80:3000"
     env_file:
         - DO-production.env
     environment:
@@ -37,6 +26,18 @@ services:
         - "27018:27017"
     volumes:
         - db:/data/db
+
+  nginx:
+    container_name: nginx
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: Dockerfile-nginx
+    depends_on:
+      - web
+    ports:
+      - "80:80"
+      - "443:443"
 
 volumes:
     db:
