@@ -9,7 +9,7 @@ const UserSchema = new Schema({
   password: { type: String, select: false },
   username: { type: String, required: true,  minlength: 3, unique: true },
   snips: [{ type: Schema.Types.ObjectId, ref: 'Snip'}],
-  githubId: { type: String, select: false, unique: true },
+  githubId: { type: String, select: false },
 });
 
 UserSchema.plugin(findOrCreate)

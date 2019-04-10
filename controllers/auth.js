@@ -20,8 +20,10 @@ module.exports = (app) => {
             .save()
             .then(user => {
                 res.render('index', {
-                    user,
+                    currentUser: user,
                 })
+            }).catch(e => {
+                console.log(e);
             })
     })
 

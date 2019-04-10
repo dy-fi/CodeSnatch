@@ -1,5 +1,4 @@
-// enviroment variables
-require('dotenv').config();
+require('dotenv').config()
 
 // Declarations
 const express = require('express');
@@ -32,7 +31,7 @@ app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
 // mongoose connect
-require('./data/CodeSnatch-db');
+require('./config/CodeSnatch-db');
 
 // static scripts and styles in public
 app.use(express.static('public'));
@@ -51,7 +50,7 @@ app.use(bodyParser.json())
 // AUTHENTICATION
 
 // passport config
-require('./passport')(passport);
+require('./config/passport')(passport);
 
 // session storage
 var MongoDBStore = require('connect-mongodb-session')(session);

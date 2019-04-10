@@ -1,8 +1,8 @@
 FROM node:8-alpine
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
-COPY . .
+COPY package.json .
+COPY package-lock.json . 
 RUN npm install
-VOLUME /etc/letsencrypt
-EXPOSE 3000 80 443
+COPY . .
 CMD [ "node", "app.js" ]

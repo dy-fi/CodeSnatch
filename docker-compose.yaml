@@ -1,32 +1,42 @@
 version: "3"
 services:
 
-  web:
-    build: .
-    deploy:
-      replicas: 5
-      restart_policy:
-        condition: on-failure
-      resources:
-        limits:
-          cpus: "1"
-          memory: 100m
+  nginx:
+    container_name: nginx
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: Dockerfile-nginx
+    depends_on:
+      - web
     ports:
-      - "80:3000"
-    links:
-      - mongo
+      - "80:80"
+      - "443:443"
+
+  web:
+    container_name: web
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    ports:
+        - "3000:3000"
     env_file:
-        DO-production.env
+        - DO-production.env
+    environment:
+        - MONGODB_URI=mongodb://mongo/db
+    depends_on:
+        - mongo
 
   mongo:
+    container_name: mongo
+    image: mongo:latest
+    environment:
+        - MONGO_INITDB_DATABASE=db
+    ports:
+        - "27018:27017"
     volumes:
         - db:/data/db
-    env_file:
-        DO-production.env
-    image: mongo:latest
-    command: mongod --port 27017
-    expose:
-        - "27017"
 
 volumes:
     db:

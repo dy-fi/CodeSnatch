@@ -4,7 +4,7 @@ const passport = require('passport'),
     LocalStrategy = require('passport-local').Strategy;
     GithubStrategy = require('passport-github2').Strategy;
 
-const User = require('./models/user')
+const User = require('../models/user')
 
 module.exports = passport => {
 

@@ -7,6 +7,7 @@ if (document.querySelector('#snip-new')) {
 
         // Assign the multipart/form-data headers to axios does a proper post
         axios.post('/snips', snip, {
+            withCredentials: true,
             headers: {
                 'Content-Type': 'multipart/form-data;',
             }

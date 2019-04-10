@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-require('../data/CodeSnatch-db');
+require('../config/CodeSnatch-db');
 
 const SnipSchema = new Schema({
     title: String,
