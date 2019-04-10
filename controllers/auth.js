@@ -23,7 +23,9 @@ module.exports = (app) => {
                     currentUser: user,
                 })
             }).catch(e => {
-                console.log(e);
+                res.json({
+                    'error': e.message
+                })
             })
     })
 
