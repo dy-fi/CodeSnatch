@@ -1,6 +1,4 @@
 FROM nginx:mainline-alpine
 WORKDIR /usr/src/app
 RUN rm /etc/nginx/conf.d/default.conf
-COPY ssl/fullchain.pem /etc/nginx/ssl/fullchain.pem
-COPY ssl/privkey.pem /etc/nginx/ssl/privkey.pem
 COPY nginx/default.conf /etc/nginx/conf.d/default.conf
