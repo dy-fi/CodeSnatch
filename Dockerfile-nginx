@@ -1,4 +1,12 @@
 FROM nginx:mainline-alpine
+RUN mkdir -p /usr/src/app
+RUN mkdir -p /usr/src/app/data/certbot/conf/live/codesnatch.io
 WORKDIR /usr/src/app
+
+# Install certbot
+# RUN apk add --no-cache bash certbot
+# RUN certbot certonly --noninteractive --agree-tos --email dylan.finn@students.makeschool.com --standalone --fullchain-path /usr/src/app/data/certbot/conf/live/codesnatch.io --config-dir /usr/src/app/data/ -d codesnatch.io -d www.codesnatch.io
+
+# copy over config files
 RUN rm /etc/nginx/conf.d/default.conf
 COPY nginx/default.conf /etc/nginx/conf.d/default.conf
