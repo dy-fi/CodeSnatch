@@ -9,15 +9,6 @@ var agent = chai.request.agent(server);
 var User = require("../models/user");
 
 describe("User", function() {
-    
-    // test unsuccessful login
-    it("should not be able to login if they have not registered", done => {
-        agent.post("/login", { username: "wrong", password: "nope" })
-            .end(function(err, res) {
-                res.status.should.be.equal(401);
-                done();
-            });
-    });
 
     // signup
     it("should be able to signup", done => {
