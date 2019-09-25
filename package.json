@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha",
     "start": "node app.js"
   },
   "author": "",
@@ -12,6 +12,8 @@
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.1",
     "connect-mongodb-session": "^2.1.1",
     "dotenv": "^6.2.0",
     "express": "^4.16.4",
@@ -27,7 +29,7 @@
     "passport-local": "^1.0.0",
     "request": "^2.88.0",
     "serve-favicon": "^2.5.0",
-    "tesseract.js": "^1.0.14",
+    "tesseract.js": "^1.0.19",
     "typed.js": "^2.0.9"
   }
 }
