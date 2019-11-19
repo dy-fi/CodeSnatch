@@ -1,18 +1,22 @@
 version: 2
 jobs:
   build:
-    working_directory: ~/codesnatch
+    working_directory: ./codesnatch
     docker:
       - image: circleci/node:8-alpine
       - image: circleci/mongo:latest
       - image: circleci/nginx:mainline-alpine
     steps:
       - checkout
+      - run:
+        - name: install-npm
+        - command: npm install
+
       - run: 
         - name: update-npm
-        - command: 'npm update'
+        - command: npm update
 
       - run:
         - name: test-npm
-        - command: 'npm test'
+        - command: npm test
         
