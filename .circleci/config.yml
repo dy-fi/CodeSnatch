@@ -4,6 +4,8 @@ jobs:
     working_directory: ~/codesnatch
     docker:
       - image: circleci/node:8-alpine
+      - image: circleci/mongo:latest
+      - image: circleci/nginx:mainline-alpine
     steps:
       - checkout
       - run: 
