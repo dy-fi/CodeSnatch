@@ -1,15 +1,15 @@
- version: 2
- jobs:
-   build:
-     working_directory: ~/codesnatch
-     docker:
-       - image: circleci/node:8-alpine
-     steps:
-       - checkout
-       - run: 
+version: 2
+  jobs:
+    build:
+      working_directory: ~/codesnatch
+      docker:
+        - image: circleci/node:8-alpine
+      steps:
+        - checkout
+        - run: 
           - name: update
           - command: 'npm update'
 
-       - run:
+        - run:
           - name: test
           - command: 'npm test'
